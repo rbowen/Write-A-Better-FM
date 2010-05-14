@@ -1,0 +1,62 @@
+
+\usepackage{fancyvrb}
+
+% Verbatim/Code definition
+% use as \begin{Code} and \end{Code}
+\DefineVerbatimEnvironment{Code}{Verbatim}{%
+frame=lines, framesep=4mm, framerule=1pt,% put lines above and below
+numbers=left, numberblanklines=false,% line numbers to the left
+obeytabs=true, tabsize=4,% tabs expand to four spaces
+commandchars=\^\[\]} % allows ^cmd[] instead of \cmd{} as a LaTeX command
+
+%No index entry
+\newcommand{\keywd}[1]{{\tt #1}}
+
+%With index entry
+\newcommand{\keyword}[1]{\keywd{#1}\index{#1}}
+
+% Backslash
+\newcommand{\bs}{\ensuremath{\backslash}}
+
+% Allow < and > in the text without complaints
+\catcode`\<=12 \catcode`\>=12
+
+\usepackage{psboxit,alltt,fancybox,epsfig}
+\newcommand{\n}{\ensuremath{\backslash{}}n}
+% This environment is for example code (ebox = example box)
+% Usage: \begin{ebox} <code> \end{ebox}
+% The one caveat is that { and } must be escaped.
+\newenvironment{ebox}%
+ {\begin{boxitpara}{box 0.90 setgray fill}\begin{alltt}%
+    \catcode`\$=12 \catcode`\#=12 \catcode`\%=12}
+ {\catcode`\%=\active \catcode`\#=\active \catcode`\$=\active%
+    \end{alltt} \end{boxitpara}}
+
+% This environment is for notes (nbox = note box)
+% Usage: \begin{nbox}{<title>} <note> \end{nbox}
+\newenvironment{nbox}[1]%
+  {\begin{Sbox}\begin{minipage}{\textwidth}%
+    \begin{minipage}{.15\textwidth}\raggedright
+    \epsfig{file=/Users/rbowen/devel/docs/bang.eps,width=40pt}\end{minipage}%
+    \begin{minipage}{.8\textwidth}{\large \bf #1}\smallskip\\}%
+  {\end{minipage}\end{minipage}\end{Sbox}\doublebox{\TheSbox}\bigskip\\}
+
+% This environment is for 1.3-specific notes
+% Usage: \begin{13box}{<title>} <note> \end{13box}
+\newenvironment{13box}%
+  {\begin{Sbox}\begin{minipage}{\textwidth}%
+    \begin{minipage}{.15\textwidth}\raggedright
+    \epsfig{file=/home/rbowen/devel/docs/13feather.eps,width=40pt}\end{minipage}%
+    \begin{minipage}{.8\textwidth}}%
+  {\end{minipage}\end{minipage}\end{Sbox}\doublebox{\TheSbox}\bigskip\\}
+
+% This environment is for 2.0-specific notes
+% Usage: \begin{20box}{<title>} <note> \end{20box}
+\newenvironment{20box}%
+  {\begin{Sbox}\begin{minipage}{\textwidth}%
+    \begin{minipage}{.15\textwidth}\raggedright
+    \epsfig{file=/home/rbowen/devel/docs/20feather.eps,width=40pt}\end{minipage}%
+    \begin{minipage}{.8\textwidth}}%
+  {\end{minipage}\end{minipage}\end{Sbox}\doublebox{\TheSbox}\bigskip\\}
+
+
