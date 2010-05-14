@@ -35,7 +35,7 @@ pdf:
 		open betterFM.pdf
 
 html:
-		latex2html -rootdir ../website/book betterFM.tex
+		latex2html -dir ../website/book betterFM.tex
 		open ../website/book/index.html
 
 everything:
