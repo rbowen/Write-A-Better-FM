@@ -10,6 +10,5 @@
 MANIFEST
 Makefile.PL
 ToDo.tex
-VERSION
 betterFM.tex
 texdefs.tex
