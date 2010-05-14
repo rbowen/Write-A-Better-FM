@@ -35,8 +35,8 @@ pdf:
 		open betterFM.pdf
 
 html:
-		latex2html betterFM.tex
-		open betterFM/index.html
+		latex2html -rootdir ../website/betterFM betterFM.tex
+		open ../website/betterFM/index.html
 
 everything:
 		make dvi
