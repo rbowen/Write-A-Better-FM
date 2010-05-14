@@ -15,7 +15,7 @@ WriteMakefile(
       DIST_DEFAULT => 'zipdist',
   },
   'realclean'  => {
-  	  FILES => 'betterFM.aux betterFM.idx betterFM.ilg betterFM.ind betterFM.log betterFM.toc betterFM.ps betterFM.ptc* betterFM.mtc* betterFM.bmt betterFM.maf'
+  	  FILES => 'betterFM.aux betterFM.idx betterFM.ilg betterFM.ind betterFM.log betterFM.toc betterFM.ps betterFM.ptc* betterFM.mtc* betterFM.bmt betterFM.maf betterFM.dvi betterFM.pdf'
   },
 
 );
