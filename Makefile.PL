@@ -39,13 +39,6 @@ everything:
 		dvipdf betterFM.dvi
 		open betterFM.pdf
 
-publish:
-		echo " " >> betterFM.tex
-		svn ci -m "version bump" 
-		make dvi
-		dvipdf betterFM.dvi
-		scp betterFM.pdf malbec.rcbowen.com:/var/www/vhosts/rewrite.drbacchus
-
 ';
 }
 
