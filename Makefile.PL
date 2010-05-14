@@ -34,6 +34,10 @@ pdf:
 		dvipdf betterFM.dvi
 		open betterFM.pdf
 
+html:
+		latex2html betterFM.tex
+		open betterFM/index.html
+
 everything:
 		make dvi
 		dvipdf betterFM.dvi
