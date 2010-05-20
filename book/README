@@ -1,0 +1,10 @@
+Mostly what you need to know is:
+
+perl Makefile.PL && make pdf
+
+You'll also need to have a LaTeX toolchain installed.
+
+At this point we'll assume that you know how to install LaTeX, and 
+that if you don't you're probably not going to be working on this
+project. As it gets more mature, this will become a more useful
+resource.
